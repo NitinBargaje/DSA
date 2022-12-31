@@ -39,7 +39,8 @@ public class BinarySearchTree {
      *  Breadth First Search:
      *  - level Order Traversal
      */
-
+    
+    // PreOrder: Root Node -> Left Subtree -> Right Subtree
     public void preOrder(BinaryNode root) {
         if(root == null) {
             return;
@@ -49,6 +50,7 @@ public class BinarySearchTree {
         preOrder(root.right);
     }
 
+    // InOrder: Left Subtree -> Root Node -> Right Subtree
     public void inOrder(BinaryNode root) {
         if(root == null ) return;
         inOrder(root.left);
@@ -56,6 +58,7 @@ public class BinarySearchTree {
         inOrder(root.right);
     }
 
+    // PostOrder: Left Subtree -> Right Subtree -> Root Node
     public void postOrder(BinaryNode root) {
         if(root == null) return;
         postOrder(root.left);
