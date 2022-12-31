@@ -2,8 +2,9 @@ package BinaryTree;
 
 public class Main {
     public static void main(String[] args) {
-        BinaryTreeLL<String> stringBinaryTreeLL = new BinaryTreeLL<>();
-        /**
+        /*** Binary tree using linked list:
+        BinaryTreeLL<String> stringBinaryTreeLL = new BinaryTreeLL<String>();
+
         BinaryNode<String> n1 = new BinaryNode<>();
         n1.value = "N1";
         BinaryNode<String> n2 = new BinaryNode<>();
@@ -32,7 +33,7 @@ public class Main {
         n4.left = n8;
         n4.right = n9;
         stringBinaryTreeLL.root = n1;
-        ***/
+
 
         stringBinaryTreeLL.insert("N1");
         stringBinaryTreeLL.insert("N2");
@@ -51,5 +52,30 @@ public class Main {
         stringBinaryTreeLL.levelOrder(stringBinaryTreeLL.root);
 
         stringBinaryTreeLL.deleteBinaryTree();
+         ***/
+
+        /** Binary Tree using Array**/
+        BinaryTree binaryTree = new BinaryTree(5);
+        binaryTree.insert("N1");
+        binaryTree.insert("N2");
+        binaryTree.insert("N3");
+        binaryTree.insert("N4");
+        binaryTree.insert("N5");
+        binaryTree.insert("N6");
+
+//        binaryTree.preOrder(1);
+//        System.out.println();
+//        binaryTree.inOrder(1);
+//        System.out.println();
+//        binaryTree.postOrder(1);
+//        System.out.println();
+//        binaryTree.levelOrder(1);
+//        int n1Index = binaryTree.search("N2");
+//        System.out.println(n1Index != -1 ? "N2 is present at "+n1Index : "N2 is not present in BT");
+        binaryTree.levelOrder(1);
+        binaryTree.delete("N2");
+        binaryTree.delete("N6");
+
+        binaryTree.levelOrder(1);
     }
 }

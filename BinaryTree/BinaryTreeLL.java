@@ -50,7 +50,7 @@ public class BinaryTreeLL<T> {
     }
 
     public void insert(T value) {
-        BinaryNode<T> tBinaryNode = new BinaryNode<>();
+        BinaryNode<T> tBinaryNode = new BinaryNode<T>();
         tBinaryNode.value = value;
         if(root == null) {
             root = tBinaryNode;
